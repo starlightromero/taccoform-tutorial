@@ -2,11 +2,20 @@
 # This tells terraform which cloud provider (or other hosted service) to expect to interaface with and
 # which version of terraform is required
 terraform {
+  backend "remote" {
+    organization = "starlightromero"
+
+    workspaces {
+      name = "taccoform-tutorial"
+    }
+  }
+
   required_providers {
     digitalocean = {
       source  = "digitalocean/digitalocean"
-      version = "~> 1.22.2"
+      version = "~> 2.0.0"
     }
+
   }
   required_version = ">= 0.13"
 }

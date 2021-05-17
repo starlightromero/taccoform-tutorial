@@ -10,5 +10,5 @@ variable "env" {
 
 variable "region" {
   description = "a digital ocean provided geographic location"
-  default     = "sfo2"
+  default     = "sfo3"
 }
